@@ -1,0 +1,33 @@
+{
+  "name": "MVP LEO-GEO-ground coexistence demo",
+  "description": "Initial reproducible scenario for one ground gateway, two LEO satellites, and one GEO satellite.",
+  "groundStations": [
+    {
+      "id": "gs-beijing",
+      "name": "Beijing Gateway",
+      "latitudeDeg": 40.0,
+      "longitudeDeg": 116.4,
+      "minElevationDeg": 10.0
+    }
+  ],
+  "satelliteLayers": [
+    {
+      "name": "LEO shell",
+      "altitudeKm": 550.0,
+      "inclinationDeg": 53.0,
+      "planes": 1,
+      "satellitesPerPlane": 2
+    },
+    {
+      "name": "GEO relay",
+      "altitudeKm": 35786.0,
+      "inclinationDeg": 0.0,
+      "longitudesDeg": [110.5]
+    }
+  ],
+  "linkBudget": {
+    "carrierFrequencyGhz": 20.0,
+    "bandwidthMhz": 100.0
+  }
+}
+
